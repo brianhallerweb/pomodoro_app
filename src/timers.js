@@ -1,4 +1,4 @@
-const { isTimeUp, print } = require("./utils");
+const { isTimeUp, message } = require("./utils");
 
 function startPomodoro(workPeriod, breakPeriod) {
   function startWorkSession() {
@@ -6,7 +6,7 @@ function startPomodoro(workPeriod, breakPeriod) {
 
     const workSession = setInterval(() => {
       if (isTimeUp(Date.now(), endWorkTime)) {
-        print("stop");
+        console.log(message("stop"));
         startBreakSession();
         clearInterval(workSession);
       }
@@ -17,7 +17,7 @@ function startPomodoro(workPeriod, breakPeriod) {
 
     const breakSession = setInterval(() => {
       if (isTimeUp(Date.now(), endBreakTime)) {
-        print("start");
+        console.log(message("start"));
         startWorkSession();
         clearInterval(breakSession);
       }
