@@ -1,4 +1,4 @@
-const startPomodoro = require("../src/timers");
+import startPomodoro from "../src/timer/timer";
 
 describe("startPomodoro", () => {
   it("should be a function", () => {
