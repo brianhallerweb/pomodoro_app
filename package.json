@@ -1,7 +1,7 @@
 {
   "name": "pomodoro",
   "scripts": {
-    "start": "server/server.js",
+    "start": "node server/server.js",
     "build": "webpack",
     "test": "jest"
   },
