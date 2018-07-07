@@ -11,6 +11,7 @@ function startPomodoro(workPeriod, breakPeriod) {
     const endWorkTime = Date.now() + workPeriod;
     store.dispatch(setTimer(workPeriod));
     document.getElementById("timeDisplay").style.color = "green";
+    document.getElementById("favicon").href = "favicons/greenfavicon.ico";
     const workSession = setInterval(() => {
       store.dispatch(decrementTimer());
       if (Date.now() > endWorkTime) {
@@ -24,6 +25,7 @@ function startPomodoro(workPeriod, breakPeriod) {
     const endBreakTime = Date.now() + breakPeriod;
     store.dispatch(setTimer(breakPeriod));
     document.getElementById("timeDisplay").style.color = "red";
+    document.getElementById("favicon").href = "favicons/redfavicon.ico";
     const breakSession = setInterval(() => {
       store.dispatch(decrementTimer());
       if (Date.now() > endBreakTime) {

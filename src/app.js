@@ -16,4 +16,5 @@ store.subscribe(() => {
   document.getElementById("timeDisplay").innerText = millisecondsToTimeDisplay(
     state.timer.timer
   );
+  document.title = millisecondsToTimeDisplay(state.timer.timer);
 });
